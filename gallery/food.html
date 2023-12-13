@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>food</title>
+    <link rel="stylesheet" href="../css/resort.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>  
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        text-decoration: none;
+        outline:none;
+        border:none;
+        text-transform: capitalize;
+        font-family: georgia; 
+        
+}
+:root{
+        --cream:#FEF2F2;
+        --dreamcream:#E4C2C1;
+        --colorgradient:linear-graident(90deg,var(--dreamcream),var(--cream));
+        --lightmarron:#B6666F;
+        --deeppink:#F53163;
+        --sandcolor:#D1A080;
+        --white:#FFFFFF;
+        --purple:#B14096;
+        --pink:#F83292;
+        --graident:linear-graident(90deg,var(--purple),var(--pink));
+}
+html{
+    font-size:62.5%;
+    overflow-x:hidden;
+}
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:var(--white); 
+    box-shadow: 0 0 50px rgba(0,0,0,.1);
+    padding:2rem 7%;
+    display:flex;
+    align-items:center;
+    justify-content: space-between; 
+    z-index:100%;
+}
+header img{
+    width:20%;
+    height:20%;
+}
+header input{
+    display: none;
+}
+header label{
+    font-size:3rem;
+    color:var(--purple);
+    cursor:pointer;
+}
+form input{
+    display: block;
+}
+
+@media(max-width:3000px){
+    html{
+        font-size:55%;
+    }
+    header label{
+        visibility: hidden; 
+        opacity: 0; 
+    }
+}
+@media(max-width:780px){
+    header label{
+        visibility: visible; 
+        opacity: 1;  
+    }
+    header input:checked ~ .navbar{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    header input:checked ~ label::before{
+        content:'\X';
+    }
+    header .formclose{
+        display: none;
+    }
+}    
+
+.fas {
+    color:var(--purple);
+    font-size: 5rem;
+}
+.heading span{
+    display: inline-block;
+    font-size: 2.6rem;
+    color:var(--purple);
+    padding-top:9%;
+    padding-right: 45%;
+    padding-left: 45%;
+    text-align: right;
+    padding-bottom:2%;
+}  
+.resort{
+    height: 100vh;
+    background:#FBFCF8;
+} 
+.resort .image-container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width:100%;
+}
+.resort .image-container .image{
+    width: 25%;
+    margin:2rem;
+    border-radius: .5rem;
+    box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 5%;
+    
+}
+.resort .image-container .image img{
+    height: 100%;
+    width:100%;
+    object-fit:cover ;
+}
+.resort .image-container .image:hover{
+  transform: translateY(-20px);
+}
+.resort .image-container .content{
+    padding-bottom: 2rem;
+    text-align: center;
+}
+.resort .image-container .content .title{
+    color:var(--pink);
+    font-size:2rem;
+    padding:2rem 0;
+}
+.icon{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+   
+}
+.resort .image-container .content .icon p{
+    color:var(--pink);
+    font-size: 2.5rem;
+    padding-top:1rem;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+}
+.resort .image-container .content p:hover{
+    color:palevioletred;
+}
+.resort .image-container .content .stars i{
+    padding:1 .2rem;
+    font-size: 2rem;
+    color:gold;
+    padding-bottom: 1rem;
+}
+.resort .image-container .content .btn{
+    font-size:1.7rem;
+    margin-top:1.4rem;
+    height: 5rem;
+    width:20rem;
+    border-radius: 20rem;
+    color:white;
+    background:var(--pink);
+    cursor: pointer;
+    transition: .2s linear;
+}
+.resort .image-container .content .btn:hover{
+    background: var(--pink)
+}
+.resort .image-container .image .discount{
+  position: absolute;
+  top:1rem;
+  left:1rem;
+  display: block;
+  height: 3.5rem;
+  width:10rem;
+  background: var(--pink);
+  color:var(--white);
+  line-height: 4rem;
+  text-align: center;
+  font-size: 2rem;
+}
+.image-container .image h3{
+    font-size: 2.5rem;
+    text-align: center;
+    color:var(--purple);
+    padding-top:3%;
+    padding-bottom: 3%;
+}
+.image-container .image h3:hover{
+     color:var(--pink)
+}
+.image-container .image .overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    height: 60%;
+    width:100%;
+    background:rgba(0,0,0,.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform:scale(0);
+}
+.image-container .image:hover .overlay{
+    transform:scale(1);
+}
+.image-container .image .overlay a{
+    font-size: 3rem;
+    padding:1.5rem 3rem;
+    background: rgba(0,0,0,.1);
+    color:white;
+    margin:1rem;
+    transform:translateY(-20rem);
+    transition-delay: calc(.1s * var(--i));
+}
+.image-container .image:hover .overlay a{
+    transform:translateY(0rem);
+}
+.image-container .image .overlay a:hover{
+    color:var(--pink);
+}
+.content  .icon {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    color:var(--pink);
+    font-size: 3.7rem;
+} 
+</style> 
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="../image/dream day3.jpg" alt=""></a>
+         <input type="checkbox" id="menu-bar"> 
+         <label for="menu-bar" class="fas fa-bars"></label>
+         <i class="fas fa-angle-left" onclick="fas();"> </i>
+</header>
+<section class="resort" id="resort">
+
+       <h1 class="heading"><span>Food</span></h1>
+
+<div class="image-container">
+       
+    <div class="image">
+        <h1 class="discount">35% off</h1>
+        <img src="../image/pics800.jpg" alt="">
+        <h3 class="title">Anu</h3>
+        <div class="content">
+          <div class="icon">
+              <i class="fa fa-map-marker" aria-hidden="true"> </i>
+              <p>Banaglore</p>
+            </div>
+          
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <i class="fas fa-star-half-alt"></i>
+        </div>
+        <a href="#"><button class="btn" placeholder="send message" onclick="chatBox();">send message</button></a>
+     </div>
+     <div class="overlay">
+         <a href="#heart" style="--i:1;" class="fas fa-heart" id="heart"></a>
+         <a href="#share" style="--i:2;" class="fas fa-share" id="share"></a>
+         <a href="#comment" style="--i:3;" class="fas fa-comment" id="comment"></a>
+     </div>
+</div>
+   <div class="image">
+        <img src="../image/pics4.jpg" alt="">
+        <h3 class="title">Maya </h3>
+        <div class="content">
+            <div class="icon">
+                <i class="fa fa-map-marker" aria-hidden="true"> </i>
+                <p>Srinagar</p>
+              </div>
+
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <i class="fas fa-star-half-alt"></i>
+        </div>
+        <a href="#"><button class="btn" placeholder="send message" onclick="chatBox();">send message</button></a>
+    </div> 
+    <div class="overlay">
+        <a href="#heart" style="--i:1;" class="fas fa-heart" id ="heart"></a>
+        <a href="#share" style="--i:2;" class="fas fa-share" id="share"></a>
+        <a href="#comment" style="--i:3;" class="fas fa-comment" id="comment"></a>
+    </div>
+</div>     
+    <div class="image">
+        <h1 class="discount">40% off</h1>
+        <img src="../image/pics1100.jpg" alt="">
+        <h3 class="title">Isha</h3>
+        <div class="content">
+            <div class="icon">
+                <i class="fa fa-map-marker" aria-hidden="true"> </i>
+                <p>Bangalore</p>
+              </div>
+
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <i class="fas fa-star-half-alt"></i>
+        </div>
+        <a href="#"><button class="btn" placeholder="send message" onclick="chatBox();">send message</button></a>
+    </div>
+    <div class="overlay">
+        <a href="#heart" style="--i:1;" class="fas fa-heart" id ="heart"></a>
+        <a href="#share" style="--i:2;" class="fas fa-share" id="share"></a>
+        <a href="#comment" style="--i:3;" class="fas fa-comment" id="comment"></a>
+    </div>  
+    </div>
+    <div class="image">
+        <img src="../image/pics1400.jpg" alt="">
+        <h3 class="title">Moni</h3>
+        <div class="content">
+            <div class="icon">
+                <i class="fa fa-map-marker" aria-hidden="true"> </i>
+                <p>Bangalore</p>
+              </div>
+
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <i class="fas fa-star-half-alt"></i>
+        </div>
+        <a href="#"><button class="btn" placeholder="send message" onclick="chatBox();">send message</button></a>
+    </div> 
+    <div class="overlay">
+        <a href="#heart" style="--i:1;" class="fas fa-heart" id ="heart"></a>
+        <a href="#share" style="--i:2;" class="fas fa-share" id="share"></a>
+        <a href="#comment" style="--i:3;" class="fas fa-comment" id="comment"></a>
+    </div> 
+</div>
+<div class="image">
+    <h1 class="discount">5% off</h1>
+    <img src="../image/pics47.jpg" alt="">
+    <h3 class="title">Gunjan</h3>
+    <div class="content">
+        <div class="icon">
+            <i class="fa fa-map-marker" aria-hidden="true"> </i>
+            <p>Bangalore</p>
+          </div>
+    
+        <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+    </div>
+    <a href="#"><button class="btn" placeholder="send message" onclick="chatBox();">send message</button></a>
+</div> 
+    <div class="overlay">
+       <a href="#heart" style="--i:1;" class="fas fa-heart" id ="heart"></a>
+       <a href="#share" style="--i:2;" class="fas fa-share" id="share"></a>
+       <a href="#comment" style="--i:3;" class="fas fa-comment" id="comment"></a>
+   </div> 
+</div>
+<div class="image">
+    <img src="../image/pics280.jpg" alt="">
+    <h3 class="title">Divya</h3>
+    <div class="content">
+        <div class="icon">
+            <i class="fa fa-map-marker" aria-hidden="true"> </i>
+            <p>Mangalore</p>
+          </div>
+
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+    </div>
+    <a href="#"><button class="btn" placeholder="send message" onclick="chatBox();">send message</button></a>
+</div> 
+   <div class="overlay">
+    <a href="#heart" style="--i:1;" class="fas fa-heart" id ="heart"></a>
+    <a href="#share" style="--i:2;" class="fas fa-share" id="share"></a>
+    <a href="#comment" style="--i:3;" class="fas fa-comment" id="comment"></a>
+   </div> 
+</div>
+<!--<div class="image">
+    <h1 class="discount">35% off</h1>
+    <img src="../image/vendor wear.jpg" alt="">
+    <h3 class="title">Radha</h3>
+    <div class="content">
+        <div class="icon">
+            <i class="fa fa-map-marker" aria-hidden="true"> </i>
+            <p>Mumbai</p>
+          </div>
+
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+        <i class="fas fa-star-half-alt"></i>
+    </div>
+    <a href="#"><button class="btn" placeholder="send message" onclick="chatBox();">send message</button></a>
+</div> 
+  <div class="overlay">
+    <a href="#heart" style="--i:1;" class="fas fa-heart" id ="heart"></a>
+    <a href="#share" style="--i:2;" class="fas fa-share" id="share"></a>
+    <a href="#comment" style="--i:3;" class="fas fa-comment" id="comment"></a>
+  </div>  
+</div>
+<div class="image">
+    <img src="../image/vendor wear7.jpg" alt="">
+    <h3 class="title">Kushi</h3>
+    <div class="content">
+        <div class="icon">
+            <i class="fa fa-map-marker" aria-hidden="true"> </i>
+            <p>Bangalore</p>
+          </div>
+
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+        <i class="fas fa-star-half-alt"></i>
+        <i class="fas fa-star-half-alt"></i>
+    </div>
+    <a href="#"><button class="btn" placeholder="send message" onclick="chatBox();">send message</button></a>
+</div>
+   <div class="overlay">
+    <a href="#heart" style="--i:1;" class="fas fa-heart" id ="heart"></a>
+    <a href="#share" style="--i:2;" class="fas fa-share" id="share"></a>
+    <a href="#comment" style="--i:3;" class="fas fa-comment" id="comment"></a>
+   </div>  
+</div>
+<div class="image">
+    <h1 class="discount">15% off</h1>
+    <img src="../image/vendor wear2.jpg" alt="">
+    <h3 class="title">Ankith</h3>
+    <div class="content">
+        <div class="icon">
+            <i class="fa fa-map-marker" aria-hidden="true"> </i>
+            <p>Mumbai</p>
+          </div>
+
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+        <i class="fas fa-star-half-alt"></i>
+    </div>
+    <a href="#"><button class="btn" placeholder="send message" onclick="chatBox();">send message</button></a>
+</div>
+   <div class="overlay">
+    <a href="#heart" style="--i:1;" class="fas fa-heart" id ="heart"></a>
+    <a href="#share" style="--i:2;" class="fas fa-share" id="share"></a>
+    <a href="#comment" style="--i:3;" class="fas fa-comment" id="comment"></a>
+   </div>  
+</div>
+<!--<div class="image">
+    <img src="../image/bride wear3.jpg" alt="">
+    <h3 class="title">Sushma</h3>
+    <div class="content">
+        <div class="icon">
+            <i class="fa fa-map-marker" aria-hidden="true"> </i>
+            <p>Mumbai</p>
+          </div>
+
+        <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+    </div>
+    <a href="#"><button class="btn" placeholder="send message" onclick="chatBox();">send message</button></a>
+</div> 
+   <div class="overlay">
+    <a href="#heart" style="--i:1;" class="fas fa-heart" id ="heart"></a>
+    <a href="#share" style="--i:2;" class="fas fa-share" id="share"></a>
+    <a href="#comment" style="--i:3;" class="fas fa-comment" id="comment"></a>
+   </div> 
+</div>
+<div class="image">
+    <h1 class="discount">20% off</h1>
+    <img src="../image/bridal wear7.jpg" alt="">
+    <h3 class="title">Pari</h3>
+    <div class="content">
+        <div class="icon">
+            <i class="fa fa-map-marker" aria-hidden="true"> </i>
+            <p>Advik</p>
+          </div>
+
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+    </div>
+    <a href="#"><button class="btn" onclick="chatBox();">send message</button></a>
+</div>
+    <div class="overlay">
+    <a href="#heart" style="--i:1;" class="fas fa-heart" id ="heart"></a>
+    <a href="#share" style="--i:2;" class="fas fa-share" id="share"></a>
+    <a href="#comment" style="--i:3;" class="fas fa-comment" id="comment"></a>
+    </div>  
+</div>
+<div class="image">
+    <img src="../image/couple goal66.jpg" alt="">
+    <h3 class="title">Lohit</h3>
+    <div class="content">
+        <div class="icon">
+            <i class="fa fa-map-marker" aria-hidden="true"> </i>
+            <p>Aarav</p>
+          </div>
+
+        <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+        <i class="fas fa-star-half-alt"></i>
+    </div>
+    <a href="#"><button class="btn" placeholder="send message" onclick="chatBox();">send message</button></a>
+</div>
+     <div class="overlay">
+    <a href="#heart" style="--i:1;" class="fas fa-heart" id ="heart"></a>
+    <a href="#share" style="--i:2;" class="fas fa-share" id="share"></a>
+    <a href="#comment" style="--i:3;" class="fas fa-comment" id="comment"></a>
+    </div>  
+</div>
+<div class="image">
+    <h1 class="discount">50% off</h1>
+    <img src="../image/photo30.jpg" alt="">
+    <h3 class="title">Tejas</h3> </h3>
+    <div class="content">
+        <div class="icon">
+            <i class="fa fa-map-marker" aria-hidden="true"> </i>
+            <p>Mumbai</p>
+          </div>
+
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+        <i class="fas fa-star-half-alt"></i>
+    </div>
+    <a href="#"><button class="btn" placeholder="send message" onclick="chatBox();">send message</button></a>
+</div>  
+   <div class="overlay">
+    <a href="#heart" style="--i:1;" class="fas fa-heart" id ="heart"></a>
+    <a href="#share" style="--i:2;" class="fas fa-share" id="share"></a>
+    <a href="#comment" style="--i:3;" class="fas fa-comment" id="comment"></a>
+   </div>
+</div>
+<div class="image">
+    <img src="../image/photo6.jpg" alt="">
+    <h3 class="title">Ramesh</h3>
+    <div class="content">
+        <div class="icon">
+            <i class="fa fa-map-marker" aria-hidden="true"> </i>
+            <p>Mumbai</p>
+          </div>
+
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+    </div>
+    <a href="#"><button class="btn" placeholder="send message" onclick="chatBox();">send message</button></a>
+</div>
+    <div class="overlay">
+    <a href="#heart" style="--i:1;" class="fas fa-heart" id ="heart"></a>
+    <a href="#share" style="--i:2;" class="fas fa-share" id="share"></a>
+    <a href="#comment" style="--i:3;" class="fas fa-comment" id="comment"></a>
+    </div>  
+</div>
+<div class="image">
+    <h1 class="discount">10% off</h1>
+    <img src="../image/photo50.jpg" alt="">
+    <h3 class="title">Rohit</h3>
+    <div class="content">
+        <div class="icon">
+            <i class="fa fa-map-marker" aria-hidden="true"> </i>
+            <p>Mumbai</p>
+          </div>
+
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+    </div>
+    <a href="#"><button class="btn" placeholder="send message" onclick="chatbox();">send message</button></a>
+</div>
+   <div class="overlay">
+    <a href="#heart" style="--i:1;" class="fas fa-heart" id ="heart"></a>
+    <a href="#share" style="--i:2;" class="fas fa-share" id="share"></a>
+    <a href="#comment" style="--i:3;" class="fas fa-comment" id="comment"></a>
+   </div>
+</div>-->
+</div>
+
+</section>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+        function fas()
+      {
+    window.location="../dream day.html"
+       }
+    
+
+         $(document).ready(function(){
+             $(".overlay").click(function(){
+                $("#heart").toggleClass("active");
+             });
+         });
+
+         function chatBox(){
+          window.location="http://localhost/contact/form.php"
+         }
+</script>
+
+</body>
+</html>

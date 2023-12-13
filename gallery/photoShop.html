@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>photo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"
+  />
+    <style>
+        *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        text-decoration: none;
+        outline:none;
+        border:none;
+        text-transform: capitalize;
+        font-family: georgia; 
+        }
+.fas {
+    color:var(--purple);
+    font-size: 1.5rem;
+    margin-left:95%;
+}
+header h1{
+    font-size: 1rem;
+    color:var(--pink);
+    text-align: center;
+    padding-top: 1.9%;
+}
+
+
+
+   /* <style>*/
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+      :root{
+        --cream:#FEF2F2;
+        --dreamcream:#E4C2C1;
+        --colorgradient:linear-graident(90deg,var(--dreamcream),var(--cream));
+        --lightmarron:#B6666F;
+        --deeppink:#F53163;
+        --sandcolor:#D1A080;
+        --white:#FFFFFF;
+        --purple:#B14096;
+        --pink:#F83292;
+        --graident:linear-graident(90deg,var(--purple),var(--pink));
+}
+
+      body {
+        background:#fff;
+       /* font-family: Helvetica Neue, Helvetica, Arial, sans-serif;*/
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+    .swiper-container {
+        width:900px;
+        height: 80%;
+        
+      }
+
+      .swiper-slide {
+       /* text-align: center;
+        font-size: 18px;*/
+        background: #fff;
+
+       box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+       border-radius: 10px;
+       overflow: hidden;
+      /* position: absolute;*/
+      left:0%;
+      top:15%;
+      /* transform: translate(-50%,-50%);*/
+
+        /* Center slide text vertically */
+       /* display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;*/
+      width:300px;
+    
+      }
+
+      .swiper-slide .slide-img{
+        height:350px;
+        position: relative;
+        
+      }
+      .slide-img img{
+          width:100%;
+          height: 100%;
+          object-fit: cover;
+          box-sizing: border-box;
+      }
+      .detail-box{
+          width:100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding:10px 20px;
+          box-sizing: border-box;
+      }
+      .type{
+          display: flex;
+          flex-direction: column;
+      }
+      .type a{
+          color:var(--purple);
+          margin: 5px 0px;
+          font-size:1rem;
+          padding-right: 8px;
+          text-decoration: none;
+      }
+      .price{
+          color:var(--purple);
+          font-weight: 600;
+          text-decoration: none;
+      }
+      .swiper-button-next{
+          color:var(--pink);
+          right: 0px;
+          font-size: 1px;
+        
+      }
+      .swiper-button-prev{
+          color:var(--pink);
+          left: 0px;
+          font-size: 1px;
+        }
+        .overlay{
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-decoration: none;
+            width:100%;
+            height:100%;
+            background-color: rgba(0,0,0,0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .buy-btn{
+            width:100px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #FFFFFF;
+            color:var(--pink);
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 15px;
+            box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+        }
+        .buy-btn:hover{
+            color:#FFFFFF;
+            background: var(--pink);
+            transition:  all ease 0.3s;
+        }
+        .overlay{
+            visibility: hidden;
+        }
+        .slide-img:hover .overlay{
+             visibility: visible;
+             animation: fade 0.5s;
+        }
+        @keyframes fade{
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Wedding Photographers</h1>
+        <i class="fas fa-angle-left" onclick="fas();"> </i>
+    </header>
+    <!-- Swiper -->
+    <div class="swiper-container mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+              <div class="slide-img">
+              <img src="../image/pics27.jpg" alt="">
+              <div class="overlay">
+                  <a href="#" class="buy-btn" onclick="chatBox();">Buy Now</a>
+              </div>
+              <div class="detail-box">
+                  <div class="type">
+                      <a href="#">Wedding photo</a>
+                  </div>
+                  <a href="#" class="price">10000Rs</a>
+              </div>
+          </div>
+      </div>
+          <div class="swiper-slide"> 
+              <div class="slide-img">
+                  <img src="../image/couple goal54.jpg" alt="">
+                  <div class="overlay">
+                      <a href="#" class="buy-btn" onclick="chatBox();">Buy Now</a>
+                  </div>
+                  <div class="detail-box">
+                      <div class="type">
+                          <a href="#">Wedding photo</a>
+                      </div>
+                      <a href="#" class="price">20000Rs</a>
+                  </div>
+              </div>
+          </div>
+          <div class="swiper-slide">
+              <div class="slide-img">
+                  <img src="../image/pics61.jpg" alt="">
+                  <div class="overlay">
+                      <a href="#" class="buy-btn" onclick="chatBox();">Buy Now</a>
+                  </div>
+                  <div class="detail-box">
+                      <div class="type">
+                          <a href="#">Wedding photo</a>
+                      </div>
+                      <a href="#" class="price">30000Rs</a>
+                  </div>
+              </div>
+          </div>
+          <div class="swiper-slide">
+              <div class="slide-img">
+                  <img src="../image/pic67.jpg" alt="">
+                  <div class="overlay">
+                      <a href="#" class="buy-btn" onclick="chatBox();">Buy Now</a>
+                  </div>
+                  <div class="detail-box">
+                      <div class="type">
+                          <a href="#">Wedding photo</a>
+                      </div>
+                      <a href="#" class="price">20000Rs</a>
+                  </div>
+              </div>
+          </div>
+          <div class="swiper-slide">
+              <div class="slide-img">
+                  <img src="../image/pic65.jpg" alt="">
+                  <div class="overlay">
+                      <a href="#" class="buy-btn" onclick="chatBox();">Buy Now</a>
+                  </div>
+                  <div class="detail-box">
+                      <div class="type">
+                          <a href="#">Wedding photo</a>
+                      </div>
+                      <a href="#" class="price">10000Rs</a>
+                  </div>
+              </div>
+          </div>
+          <div class="swiper-slide">
+              <div class="slide-img">
+                  <img src="../image/pic77.jpg" alt="">
+                  <div class="overlay">
+                      <a href="#" class="buy-btn" onclick="chatBox();">Buy Now</a>
+                  </div>
+                  <div class="detail-box">
+                      <div class="type">
+                          <a href="#">Wedding photo</a>
+                      </div>
+                      <a href="#" class="price">30000Rs</a>
+                  </div>
+              </div>
+          </div>
+          <div class="swiper-slide">
+              <div class="slide-img">
+                  <img src="../image/pics 35.jpg" alt="">
+                  <div class="overlay">
+                      <a href="#" class="buy-btn" onclick="chatBox();">Buy Now</a>
+                  </div>
+                  <div class="detail-box">
+                      <div class="type">
+                          <a href="#">Wedding photo</a>
+                      </div>
+                      <a href="#" class="price">20000Rs</a>
+                  </div>
+              </div>
+          </div>
+          <div class="swiper-slide">
+              <div class="slide-img">
+                  <img src="../image/pics 34.jpg" alt="">
+                  <div class="overlay">
+                      <a href="#" class="buy-btn" onclick="chatBox();">Buy Now</a>
+                  </div>
+                  <div class="detail-box">
+                      <div class="type">
+                          <a href="#">Wedding photo</a>
+                      </div>
+                      <a href="#" class="price">10000Rs</a>
+                  </div>
+              </div>
+          </div>
+          <div class="swiper-slide">
+              <div class="slide-img">
+                  <img src="../image/pics 33.jpg" alt="">
+                  <div class="overlay">
+                      <a href="#" class="buy-btn" onclick="chatBox();">Buy Now</a>
+                  </div>
+                  <div class="detail-box">
+                      <div class="type">
+                          <a href="#">Wedding photo</a>
+                      </div>
+                      <a href="#" class="price">30000Rs</a>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+     
+  
+      <!-- Swiper JS -->
+     <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>-->
+  
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 3,
+          spaceBetween: 30,
+          slidesPerGroup: 3,
+          loop: true,
+          loopFillGroupWithBlank: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+  
+        function fas()
+        {
+      window.location="../dream day.html"
+        }
+        function chatBox(){
+          window.location="http://localhost/contact/form.php"
+         }
+    </script>
+</body>
+</html>

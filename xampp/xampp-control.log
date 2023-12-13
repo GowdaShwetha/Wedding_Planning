@@ -1,0 +1,70 @@
+21:02:43  [main] 	Initializing Control Panel
+21:02:43  [main] 	Windows Version:  Home  64-bit
+21:02:43  [main] 	XAMPP Version: 7.3.28
+21:02:43  [main] 	Control Panel Version: 3.3.0  [ Compiled: Apr 6th 2021 ]
+21:02:43  [main] 	You are not running with administrator rights! This will work for
+21:02:43  [main] 	most application stuff but whenever you do something with services
+21:02:43  [main] 	there will be a security dialogue or things will break! So think 
+21:02:43  [main] 	about running this application with administrator rights!
+21:02:43  [main] 	XAMPP Installation Directory: "c:\users\shwet\onedrive\desktop\dream day\xampp\"
+21:02:43  [main] 	WARNING: Your install directory contains spaces.  This may break programs/scripts
+21:02:43  [main] 	Checking for prerequisites
+21:02:43  [main] 	All prerequisites found
+21:02:43  [main] 	Initializing Modules
+21:02:43  [Apache] 	Problem detected!
+21:02:43  [Apache] 	Port 80 in use by "D:\xampp\apache\bin\httpd.exe" with PID 11588!
+21:02:43  [Apache] 	Apache WILL NOT start without the configured ports free!
+21:02:43  [Apache] 	You need to uninstall/disable/reconfigure the blocking application
+21:02:43  [Apache] 	or reconfigure Apache and the Control Panel to listen on a different port
+21:02:43  [Apache] 	Problem detected!
+21:02:43  [Apache] 	Port 443 in use by "D:\xampp\apache\bin\httpd.exe" with PID 11588!
+21:02:43  [Apache] 	Apache WILL NOT start without the configured ports free!
+21:02:43  [Apache] 	You need to uninstall/disable/reconfigure the blocking application
+21:02:43  [Apache] 	or reconfigure Apache and the Control Panel to listen on a different port
+21:02:43  [mysql] 	Problem detected: MySQL Not Found!
+21:02:43  [mysql] 	Disabling MySQL buttons
+21:02:43  [mysql] 	Run this program from your XAMPP root directory!
+21:02:43  [mysql] 	Problem detected!
+21:02:43  [mysql] 	Port 3306 in use by "D:\xampp\mysql\bin\mysqld.exe"!
+21:02:43  [mysql] 	MySQL WILL NOT start without the configured ports free!
+21:02:43  [mysql] 	You need to uninstall/disable/reconfigure the blocking application
+21:02:43  [mysql] 	or reconfigure MySQL and the Control Panel to listen on a different port
+21:02:43  [Tomcat] 	Problem detected: Tomcat Not Found!
+21:02:43  [Tomcat] 	Disabling Tomcat buttons
+21:02:43  [Tomcat] 	Run this program from your XAMPP root directory!
+21:02:43  [main] 	Starting Check-Timer
+21:02:43  [main] 	Control Panel Ready
+21:02:45  [Apache] 	Problem detected!
+21:02:45  [Apache] 	Port 80 in use by "D:\xampp\apache\bin\httpd.exe" with PID 11588!
+21:02:45  [Apache] 	Apache WILL NOT start without the configured ports free!
+21:02:45  [Apache] 	You need to uninstall/disable/reconfigure the blocking application
+21:02:45  [Apache] 	or reconfigure Apache and the Control Panel to listen on a different port
+21:02:45  [Apache] 	Problem detected!
+21:02:45  [Apache] 	Port 443 in use by "D:\xampp\apache\bin\httpd.exe" with PID 11588!
+21:02:46  [Apache] 	Apache WILL NOT start without the configured ports free!
+21:02:46  [Apache] 	You need to uninstall/disable/reconfigure the blocking application
+21:02:46  [Apache] 	or reconfigure Apache and the Control Panel to listen on a different port
+21:02:46  [Apache] 	Attempting to start Apache app...
+21:02:46  [Apache] 	Status change detected: running
+21:02:47  [Apache] 	Status change detected: stopped
+21:02:47  [Apache] 	Error: Apache shutdown unexpectedly.
+21:02:47  [Apache] 	This may be due to a blocked port, missing dependencies, 
+21:02:47  [Apache] 	improper privileges, a crash, or a shutdown by another method.
+21:02:47  [Apache] 	Press the Logs button to view error logs and check
+21:02:47  [Apache] 	the Windows Event Viewer for more clues
+21:02:47  [Apache] 	If you need more help, copy and post this
+21:02:47  [Apache] 	entire log window on the forums
+21:02:54  [Apache] 	Problem detected!
+21:02:54  [Apache] 	Port 80 in use by "D:\xampp\apache\bin\httpd.exe" with PID 11588!
+21:02:54  [Apache] 	Apache WILL NOT start without the configured ports free!
+21:02:54  [Apache] 	You need to uninstall/disable/reconfigure the blocking application
+21:02:54  [Apache] 	or reconfigure Apache and the Control Panel to listen on a different port
+21:02:54  [Apache] 	Problem detected!
+21:02:54  [Apache] 	Port 443 in use by "D:\xampp\apache\bin\httpd.exe" with PID 11588!
+21:02:54  [Apache] 	Apache WILL NOT start without the configured ports free!
+21:02:54  [Apache] 	You need to uninstall/disable/reconfigure the blocking application
+21:02:54  [Apache] 	or reconfigure Apache and the Control Panel to listen on a different port
+21:02:54  [Apache] 	Attempting to start Apache app...
+21:05:16  [main] 	Deinitializing Modules
+21:05:16  [main] 	Deinitializing Control Panel
+

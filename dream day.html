@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Day</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        
+    <a href="#" class="logo"><img src="./image/dream day4.jpg" alt=""></a>
+
+       <input type="checkbox" id="menu-bar"> 
+       <label for="menu-bar" class="fas fa-bars"></label>
+
+    <nav class="navbar">
+      <ul> 
+           <li><a href="#home">Home</a></li>
+           <li><a href="#vendors">Vendors</a></li>
+           <li><a href="#shop">Shop</a></li>
+           <li><a href="#ideas">Ideas</a></li>
+           <li><a href="#login " id="login" onclick="form();" >Login</a>
+             <div class="sub-menu-1">
+                  <div class="container">
+                    
+                 <i class="form-close fas fa-times"></i>
+                    
+                        <form action="">
+                            <h3>Login</h3>
+                            <input type="text" placeholder=" Enter Name"  required >
+                            <input type="password" placeholder=" Enter password"  required>
+                            <h3 class="type">Select Type</h3>
+                            <select>
+                                <option >Admin</option>
+                                <option >User</option>
+                            </select>
+                    
+                            <div class="btn-box">
+                                <button type="button" id="submit">Login</button>
+                            </div>
+                        </form>
+                    </div>
+               </div>
+            </li>
+           </ul> 
+        </nav>
+    </header>
+
+<section class="home" id="home">
+   <!-- <div class="content">
+     
+        <h3>Life is an event make it memorable</h3>
+        <h4>Brining dreams to life</h4>
+
+    </div>-->
+
+    <div class="controls">
+        <span class="vid-btn active" data-src="./video/green couple.mp4"></span>
+        <span class="vid-btn" data-src="./video/video2.mp4"></span>
+        <span class="vid-btn" data-src="./video/video3.mp4"></span>
+        <span class="vid-btn" data-src="./video/video4.mp4"></span>
+    </div>
+
+    <div class="video-container">
+        <video src="./video/green couple.mp4" id="video-slider" loop autoplay muted></video>
+    </div>
+</section>
+
+<section class="vendors" id="vendors">
+    <div class="categories">
+        <h3>Vendor  categories</h3>
+    </div>    
+        <div class="vendors-categories" id="vendors-categories">
+          <div class="venues" id="venues">
+            <img src="image/ressort4.jpg" alt="">
+            <a href="#venues"><span>Venues   <i class="fas fa-angle-down"></i></span></a>
+            <ul >
+                <li><a href="#resort" onclick="resort();">Resort</a></li>
+                 <li><a href="#destination-wedding" onclick="dest();">Destination wedding</a></li>
+                 <li><a href="#kalyan-mandapam" onclick="kalyan();">Kalyan Mandapam</a></li>
+                <!-- <li><a href="#farmHouses" >FarmHouses</a></li>
+                 <li><a href="#banquet-halls">Banquet Halls</a></li>
+                 <li><a href="#fort">Fort</a></li>-->
+             </ul> 
+            </div>
+            
+            <div class="photographers" id="photographers">
+                <a href="#photograhers">
+                   <span>Photographers   <i class="fas fa-angle-down"></i></span></a>
+                <img src="image/wedding photographers.jpg" alt="">
+                <ul>
+                    <li><a href="#photo" onclick="photo();">Photographers</a></li>
+                    <li><a href="#cinema" onclick="video();">Cinema/Video</a></li>
+                   <!-- <li><a href="#pre-wedding">Pre Wedding Shoot</a></li>-->
+                </ul>
+
+            </div>
+
+            <div class="makeup" id="makeup">
+                <a href="#makeup">
+                  <span>Makeup   <i class="fas fa-angle-down"></i></span></a>
+                <img src="image/makeup ashika.jpg" alt="">
+                <ul>
+                    <li><a href="#bridal-makeup" onclick="makeup1();">Bridal Makeup</a></li>
+                  <!--  <li><a href="#family-makeup">Family Makeup</a></li>-->
+                </ul>
+            </div>
+
+            <div class="bridal-wear" id="bridal-wear">
+                <a href="#bridal-wear">
+                    <span>Bridal Wear  <i class="fas fa-angle-down"></i></span></a>
+                <img src="image/bridewear vendor.jpg" alt="">
+            <ul>
+                <li><a href="#bridal-lehengas" onclick="wear1();">Bridal Lehengas</a></li>
+                <li><a href="#silk-sarees" onclick="saree();">Silk Sarees</a></li>
+               <!--<li><a href="#cocktail-gowns">Cocktail Gowns</a></li>
+                <li><a href="#Bridal-Lehenga-on-Rent">Bridal Lehenga on Rent</a></li>
+                <li><a href="#groom-bride-twinning">groom bride twinning</a></li>-->
+            </ul>    
+            </div>
+            
+            <div class="groom-wear" id="groom-wear">
+                <a href="#groom-wear">
+                    <Span>Groom Wear  <i class="fas fa-angle-down"></i></Span></a>
+                <img src="image/groom parth.jpg" alt="">
+            <ul>    
+                <li><a href="#Sherwani" onclick="wear2();">groom wear</a></li>
+                <li><a href="#Wedding-Suits/Tuxes" onclick="suit();">Wedding Suits / Tuxes</a></li>
+                <!--<li><a href="#Sherwani-on-Rent">Sherwani on Rent</a></li>
+                <li><a href="#groom-bride-twinning">groom bride twinning</a></li>-->
+            </ul>    
+            </div>
+           
+            <div class="mehndi" id="mehndi"> 
+                <a href="#mehndi">
+                  <span>Mehndi     <i class="fas fa-angle-down"></i></span></a>
+                <img src="image/mehndi vendor.jpg" alt="">
+            <ul>   
+                <li><a href="#mehendi-artist" onclick="mehndi();">Mehendi Artist</a></li>
+            </ul>    
+            </div>
+            
+            <div class="planning" id="planning">
+                 <a href="#planning">
+                     <span>Planning and Decor <i class="fas fa-angle-down"></i></span>
+                 </a>
+                 <img src="image/planning2.jpg" alt="">
+                 <ul>
+                     <li><a href="#decorators" onclick="decor();">Decorators</a></li>
+                 </ul>
+            </div>
+          
+            
+            <div class="food" id="food">
+                <a href="#food">
+                    <span>Food    <i class="fas fa-angle-down"></i></span></a>
+                <img src="image/food.jpg" alt="">
+            <ul>    
+                <li><a href="#catering-services" onclick="food();">Catering Services</a></li>
+                <li><a href="#cake" onclick="cake();">Cake</a></li>
+               <!-- <li><a href="#cake&food-stalls">Cake & Food Stalls</a></li>
+                <li><a href="#home-catering">Home Catering</a></li>-->
+            </ul>    
+            </div>
+
+            <div class="invites" id="invites">
+                <a href="#invites">
+                  <span>Invites & Gifts   <i class="fas fa-angle-down"></i></span></a>
+                <img src="image/gift1.jpg" alt="">
+            <ul>
+                <li><a href="#invitations" onclick="invite();">Invitations</a></li>
+              <!--  <li><a href="#favors">Favors</a></li>-->
+                <li><a href="#invitation-gifts" onclick="gift();">Invitation Gifts</a></li>
+            </ul>    
+                
+            </div>
+
+            <div class="music" id="music">
+                <a href="#music">
+                 <span>Music & Dance    <i class="fas fa-angle-down"></i></span></a>
+                <img src="image/dance1.jpg" alt="">
+            <ul>    
+              <!--  <li><a href="#dj">Dj's</a></li>-->
+                <li><a href="#sangeet-choreographer" onclick="sangeet();">Sangeet Choreographer</a></li>
+              <!--  <li><a href="#wedding-enterainment">Wedding Entertainment</a></li>-->
+            </ul>    
+            </div>
+            
+            <div class="jewellery" id="jewellery">
+                <a href="#jewellery">
+                 <span>Jewellery& Accessories   <i class="fas fa-angle-down"></i></span> </a>
+                <img src="image/jewellery ashika.jpg" alt="">
+            <ul>
+                <li><a href="#jewellerys" onclick="jewellerys();">Jewellerys</a></li>
+                <li><a href="#flower-jewellery" onclick="flower();">Flower jewellery</a></li>
+                <!--<li><a href="#bridal-jewellery">Bridal jewellery on Rent</a></li>
+                <li><a href="#Acessories">Accessories</a></li>
+                <li><a href="#artifical">Artifical</a></li>-->
+            </ul>    
+            </div>
+        </div>
+</section>
+
+<section class="shop" id="shop">
+    <h3><span>S</span>hop</h3>
+    <div class="shop-image">
+       <div class="image">
+           <img src="./image/isha couple8.jpg" alt="" onclick="photoShop();">
+           <h3 class="wedding-photographers">Wedding Photographers </h3>
+           
+       </div>  
+       <div class="image"  >
+        <img src="./image/disha.jpg" alt="" onclick="jewellShop();">
+        <h3 class="jewellery-accessories">Jewellery & Accessories</h3>
+      </div>  
+       <div class="image">
+          <img src="./image/makeup15.jpg" alt="" onclick="makeupShop();">
+          <h3 class="Makeup">Makeup</h3>  
+       </div>
+       <div class="image">
+        <img src="./image/bridal wear.jpg" alt="" onclick="brideShop();">
+        <h3 class="groom-shop">Bridal Wear</h3>  
+     </div>
+     <div class="image">
+        <img src="./image/groom1.jpg" alt="" onclick="groomShop();">
+        <h3 class="groom-shop">Groom Wear</h3>  
+     </div>
+     <div class="image">
+        <img src="./image/couple goals15.jpg" alt="" onclick="coupleShop();">
+        <h3 class="couple-goals">Couple Goals</h3>  
+     </div>   
+</div>     
+ 
+<div class="image-container">
+<div class="image">
+    <h1 class="discount">Best Sales</h1>
+    <img src="./image/isha3.jpg" alt="">
+    <h3 class="title">Bridal Wear</h3>
+    <div class="content">
+    <p>$15000</p>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+    </div>
+    <a href="#"><button class="btn" placeholder="send message" onclick="chat();">send message</button></a>
+</div> 
+<div class="overlay">
+    <a href="#heart" style="--i:1;" class="fas fa-heart" id ="heart"></a>
+    <a href="#share" style="--i:2;" class="fas fa-share" id="share"></a>
+    <a href="#comment" style="--i:3;" class="fas fa-comment" id="comment"></a>
+</div>
+</div>     
+
+<div class="image">
+    <h1 class="discount">Best Sales</h1>
+    <img src="./image/jewllery shop.jpg" alt="">
+    <h3 class="title">Jewellery</h3>
+    <div class="content">
+    <p>$60000</p>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+        <i class="fas fa-star-half-alt"></i>
+    </div>
+    <a href="#"><button class="btn" placeholder="send message" onclick="chat();">send message</button></a>
+</div> 
+<div class="overlay">
+    <a href="#heart" style="--i:1;" class="fas fa-heart" id ="heart"></a>
+    <a href="#share" style="--i:2;" class="fas fa-share" id="share"></a>
+    <a href="#comment" style="--i:3;" class="fas fa-comment" id="comment"></a>
+</div>
+</div>     
+
+<div class="image">
+    <h1 class="discount">Best Sales</h1>
+    <img src="./image/isha couple5.jpg" alt="">
+    <h3 class="title">Couple Goals</h3>
+    <div class="content">
+    <p></p>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa"></i>
+        <i class="fas fa-star-half-alt"></i>
+    </div>
+    <a href="#"><button class="btn" placeholder="send message" onclick="chat();">send message</button></a>
+</div> 
+<div class="overlay">
+    <a href="#heart" style="--i:1;" class="fas fa-heart" id ="heart"></a>
+    <a href="#share" style="--i:2;" class="fas fa-share" id="share"></a>
+    <a href="#comment" style="--i:3;" class="fas fa-comment" id="comment"></a>
+</div>
+</div>     
+</div>
+</section>
+
+<section class="ideas" id="ideas">
+    <div class="headings">
+  <h1>Ideas</h1>
+</div>
+    <div class="idea-container">
+        <div class="boxs1" >
+            <div class="imgbox" onclick="ideaImg();">
+            </div>
+        </div>
+    
+
+       <div class="boxs1" >
+            <div class="imgbox2" onclick="idea();">
+                
+            </div>
+             
+        </div>
+
+        <div class="boxs1">
+            <div class="imgbox3" onclick="ideaImage();">
+            </div>
+        </div>
+
+      <div class="boxs1">
+            <div class="imgbox4" onclick="ideasImg();">
+            </div>
+            
+        </div>
+   </div>
+</section><br>
+
+<footer>
+    <div class="footer-content">
+        <h3>Dream Day</h3>
+        <p>
+            Life is an event make it memorable.<br>
+            Brining dreams to life.
+        </p>
+        <ul class="socials">
+            <li><a href=""><img src="./icons/facebook.svg" alt=""></a></li>
+            <li><a href="#"><img src="./icons/google.svg" alt=""></a></li>
+            <li><a href="#"><img src="./icons/twitter.svg" alt=""></a></li>
+            <li><a href="#"><img src="./icons/instagram.svg" ait=""></a></li>
+        
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>copyright & copy;2021 dreamday .designed by <span>Shwetha & sonu</span></p>
+    </div>
+</footer>
+
+<script src="js/dream day.js"></script>
+</body>
+</html>

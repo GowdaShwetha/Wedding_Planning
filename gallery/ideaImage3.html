@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jewellShop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     
+    <style>
+        *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        text-decoration: none;
+        outline:none;
+        border:none;
+        text-transform: capitalize;
+        font-family: georgia; 
+        
+}
+:root{
+        --cream:#FEF2F2;
+        --dreamcream:#E4C2C1;
+        --colorgradient:linear-graident(90deg,var(--dreamcream),var(--cream));
+        --lightmarron:#B6666F;
+        --deeppink:#F53163;
+        --sandcolor:#D1A080;
+        --white:#FFFFFF;
+        --purple:#B14096;
+        --pink:#F83292;
+        --graident:linear-graident(90deg,var(--purple),var(--pink));
+}
+html{
+    font-size:62.5%;
+    overflow-x:hidden;
+}
+.fas {
+    color:var(--purple);
+    font-size: 3rem;
+    margin-left:95%;
+}
+header h1{
+    font-size: 2rem;
+    color:var(--pink);
+    text-align: center;
+    margin-top:2%;
+}
+.image-container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width:100%;
+}
+.image-container .image{
+    width: 25%;
+    margin:2rem;
+    border-radius: .5rem;
+    box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 5%;
+    
+}
+.image-container .image img{
+    height: 100%;
+    width:100%;
+    object-fit:cover ;
+}
+.image-container .image:hover{
+  transform: translateY(-20px);
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ideas</h1>
+        <i class="fas fa-angle-left" onclick="fas();"> </i>
+    </header>
+    <div class="image-container">
+       
+        <div class="image">
+            <img src="../image/game3.jpg" alt="">
+        </div>
+
+        <div class="image">
+            <img src="../image/game ring.jpg" alt="">
+        </div>
+
+        <div class="image">
+            <img src="../image/game17.jpg" alt="">
+        </div>
+
+        <div class="image">
+            <img src="../image/game 22.jpg" alt="">
+        </div>
+
+        <div class="image">
+            <img src="../image/game18.jpg" alt="">
+        </div>
+
+        <div class="image">
+            <img src="../image/game 21.jpg" alt="">
+        </div>
+
+       
+    </div>   
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+ 
+    <script>
+        function fas(){
+            window.location="../dream day.html"
+        }
+    </script>
+</body>
+</html>
